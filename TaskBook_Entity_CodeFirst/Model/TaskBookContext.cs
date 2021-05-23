@@ -15,6 +15,8 @@ namespace TaskBook_Entity_CodeFirst.Model
         public DbSet<Status> Status { get; set; }
         public DbSet<Consumer> Consumers { get; set; }
         public DbSet<Executor> Executors { get; set; }
+        public DbSet<Departamen> Departamens { get; set; }
+        public DbSet<Specialization> Specializations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
