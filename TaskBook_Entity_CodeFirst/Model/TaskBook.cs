@@ -11,13 +11,10 @@ namespace TaskBook_Entity_CodeFirst.Model
         public int Id { get; set; }
         public string TaskName { get; set; }
         public string TechnicalSpecification { get; set; }
-        public int Deadline { get; set; }
-        public int Status_ID { get; set; }
-        public int Executor_ID { get; set; }
-        public int Consumer_ID { get; set; }
-
+       
         public Priority Priorities { get; set; }
-
+        public Status Status { get; set; }
+        public Deadline Deadline { get; set; }
 
     }
 }

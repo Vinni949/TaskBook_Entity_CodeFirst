@@ -8,5 +8,13 @@ namespace TaskBook_Entity_CodeFirst.Model
 {
     class Deadline
     {
+        public int ID { get; set; }
+        public string Title { get; set; }
+
+        public List<TaskBook> TaskBooks { get; set; }
+        public Deadline()
+        {
+            TaskBooks = new List<TaskBook>();
+        }
     }
 }
