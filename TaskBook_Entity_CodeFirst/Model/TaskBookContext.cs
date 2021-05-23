@@ -13,6 +13,8 @@ namespace TaskBook_Entity_CodeFirst.Model
         public DbSet<Priority> Prioritys { get; set; }
         public DbSet<Deadline> Deadlines { get; set; }
         public DbSet<Status> Status { get; set; }
+        public DbSet<Consumer> Consumers { get; set; }
+        public DbSet<Executor> Executors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

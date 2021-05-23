@@ -15,6 +15,8 @@ namespace TaskBook_Entity_CodeFirst.Model
         public Priority Priorities { get; set; }
         public Status Status { get; set; }
         public Deadline Deadline { get; set; }
+        public Consumer Consumers { get; set; }
+        public Executor Executors { get; set; }
 
     }
 }
