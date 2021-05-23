@@ -25,5 +25,34 @@ namespace TaskBook_Entity_CodeFirst.Model
                 optionsBuilder.UseSqlServer("server = localhost; user = sa; database = TaskBook_Entity_CodeFirst; password = SAsa");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           
+            modelBuilder.Entity<TaskBook>(entity =>
+            {
+                entity.Property(e => e.TaskName)
+                .HasMaxLength(20)
+                .IsRequired();
+
+                entity.Property(e=>e.Id)
+                .HasColumnName("ID")
+                .IsRequired();
+            });
+
+            modelBuilder.Entity<Priority>(e =>
+            {
+                e.Property(e => e.Title)
+                .HasMaxLength(15)
+                .IsRequired();
+            });
+
+            modelBuilder.Entity<Status>(e =>
+            {
+                e.Property(e => e.Title)
+                .HasMaxLength(10)
+                .IsRequired();
+            });
+        }
     }
 }
