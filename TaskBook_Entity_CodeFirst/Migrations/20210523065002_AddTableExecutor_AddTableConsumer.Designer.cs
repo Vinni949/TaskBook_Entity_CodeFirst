@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskBook_Entity_CodeFirst.Model;
 
 namespace TaskBook_Entity_CodeFirst.Migrations
 {
     [DbContext(typeof(TaskBookContext))]
-    partial class TaskBookContextModelSnapshot : ModelSnapshot
+    [Migration("20210523065002_AddTableExecutor_AddTableConsumer")]
+    partial class AddTableExecutor_AddTableConsumer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
